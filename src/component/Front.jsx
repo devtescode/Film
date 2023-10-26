@@ -1,30 +1,32 @@
 import React, { useState, useEffect } from 'react'
 import "./Front.css"
+const url="http://www.omdbapi.com?apikey=e1112302&"
 import axios from 'axios'
 const Front = () => {
   const [filmname, setfilmname] = useState("")
   const [first, setfirst] = useState([])
-  const [url, seturl] = useState("http://www.omdbapi.com?apikey=e1112302&s=spiderman")
+  
   useEffect(() => {
-    axios.get(url).then((res) => {
-      setfirst(res.data.Search)
-      console.log(res.data);
-      console.log(first);
-    }).catch((err) => {
-      
-    })
+    if(first.length == 0){
+      axios.get(`${url}s=mercy`).then((res) => {
+        setfirst(res.data.Search)
+        console.log(res.data);
+        console.log(first);
+      }).catch((err) => {
+        
+      })
+    }
   console.log(url);
   }, [])
   
   const filmBtn = () => {
-   seturl (`http://www.omdbapi.com?apikey=e1112302&s=${filmname}`)
-    if (filmname == "") {
-      swal("Empty Input", "Enter Any Title Film In Your Input", "error");
-
+   if (filmname == "") {
+     swal("Empty Input", "Enter Any Title Film In Your Input", "error");
     }
     else {
-      axios.get(url).then((res) => {
-        setfirst(res.data.Search)
+    
+      axios.get(`${url}s=${filmname}`).then((res) => {
+        setfirst((prv)=>[...res.data.Search])
         console.log(res.data);
         console.log(first);
       }).catch((err) => {
@@ -74,7 +76,7 @@ const Front = () => {
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" onClick={filmBtn}><i className="ri-search-line"></i></button>
+              <button type="button" class="btn btn-primary" onClick={filmBtn} data-bs-dismiss="modal"><i className="ri-search-line"></i></button>
             </div>
           </div>
         </div>
