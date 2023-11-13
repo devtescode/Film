@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import "./Front.css"
-const url="http://www.omdbapi.com?apikey=e1112302&"
+const url="https://www.omdbapi.com?apikey=e1112302&"
 import axios from 'axios'
 const Front = () => {
   const [filmname, setfilmname] = useState("")
@@ -76,7 +76,8 @@ const Front = () => {
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" onClick={filmBtn} data-bs-dismiss="modal"><i className="ri-search-line"></i></button>
+              <button type="button" class="btn btn-primary" onClick={filmBtn} data-bs-dismiss="modal"
+              ><i className="ri-search-line"></i></button>
             </div>
           </div>
         </div>
