@@ -100,7 +100,7 @@ const Front = () => {
       </div> */}
 
       <div>
-        <div className='container row gap-4 mx-auto w-100' style={{marginTop:"5%"}}>
+        <div className='container row gap-4 mx-auto' style={{marginTop:"5%"}}>
           {
             first == "" ?
             <div>Wait for a moment</div>
