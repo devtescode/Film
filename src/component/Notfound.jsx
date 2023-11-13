@@ -9,7 +9,7 @@ const Notfound = () => {
     }
     return (
         <>
-            <div className='container shadow-lg border p-4'>
+            <div className='container'>
                 <div className='mx-auto text-center'>
                     <img src={logo} className='styleerrimg' alt="" />
                     <p>This page isn't available click on the button below</p>
