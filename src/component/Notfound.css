@@ -1,0 +1,17 @@
+/* .container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+} */
+.styleerrimg{
+    width: 70%;
+}
+@media (max-width:688px) {
+    .styleerrimg{
+        width: 100% !important;
+        margin-top: 300px;
+    }
+}
+
+
+
