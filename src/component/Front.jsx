@@ -51,7 +51,7 @@ const Front = () => {
   }
   return (
     <>
-      <div className='d-flex justify-content-between'>
+      <div className='d-flex justify-content-between px-4 p-2'>
         <button onClick={searchBtn} type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
           <i className="ri-search-line"></i>
         </button>
@@ -100,32 +100,34 @@ const Front = () => {
       </div> */}
 
       <div>
-        <div className='row gap-4 mx-auto' style={{ position: "absolute", top: "10%" }}>
+        <div className='container row gap-4 mx-auto w-100' style={{marginTop:"5%"}}>
           {
-            // first == "" ?
-            // <div>no input enter</div>
-            // :
+            first == "" ?
+            <div>Wait for a moment</div>
+            :
             first.map((item, index) => (
-              <div className="card mx-auto shadow-lg" style={{ width: "18rem" }}>
-                <img src={item.Poster} className="card-img-top" alt="..." />
-
-                <div className='d-flex justify-content-between'>
-
-                  <div className="card-body">
-                    <p className="card-text">Title</p>
-                    <p className="card-text">Year</p>
-                    <p className="card-text">Type</p>
+              <div className="card mx-auto shadow-lg" style={{ maxWidth: "19rem" }}>
+              <img src={item.Poster} className="card-img-top" alt="..." />
+              <div className='card-body'>
+                <div className='row'>
+                  <div className='col-6'>
+                    <p className="card-text fw-bold">Title</p>
+                    <p className="card-text fw-bold">Year</p>
+                    <p className="card-text fw-bold">Type</p>
                   </div>
-                  <div className="card-body">
+                  <div className='col-6'>
                     <p className="card-text">{item.Title}</p>
                     <p className="card-text">{item.Year}</p>
                     <p className="card-text">{item.Type}</p>
                   </div>
                 </div>
-                <div className='fw-bold' style={{ position: "absolute", bottom: "0px", right: "0px" }}>
-                  <p className="card-text">NO:{index + 1}</p>
-                </div>
               </div>
+            
+              <div className='card-footer text-end fw-bold'>
+                <p className="card-text">NO: {index + 1}</p>
+              </div>
+            </div>
+            
 
 
 

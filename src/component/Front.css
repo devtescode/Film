@@ -169,7 +169,9 @@ label {
 .input:focus ~ .highlight {
  animation: inputHighlighter 0.3s ease;
 }
-
+/* .myres{
+    width: 20%;
+} */
 @keyframes inputHighlighter {
  from {
   background: #5264AE;
