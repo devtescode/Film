@@ -172,6 +172,9 @@ label {
 /* .myres{
     width: 20%;
 } */
+.styleit{
+    width: 100px;
+}
 @keyframes inputHighlighter {
  from {
   background: #5264AE;

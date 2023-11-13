@@ -52,10 +52,10 @@ const Front = () => {
   return (
     <>
       <div className='d-flex justify-content-between px-4 p-2'>
-        <button onClick={searchBtn} type="button" class="btn btn-primary p-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button onClick={searchBtn} type="button" class="btn btn-primary p-3 styleit" data-bs-toggle="modal" data-bs-target="#exampleModal">
           <i className="ri-search-line"></i>
         </button>
-        <button className='btn btn-dark p-3' id='changmode' onClick={modeBtn}><i className="ri-moon-fill"></i></button>
+        <button className='btn btn-dark p-3 styleit' id='changmode' onClick={modeBtn}><i className="ri-moon-fill"></i></button>
       </div>
 
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
