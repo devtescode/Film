@@ -1,4 +1,18 @@
-
-
-
-
+.contdiv {
+    clip-path: polygon(28% 57%, 58% 57%, 58% 40%, 79% 63%, 59% 86%, 59% 72%, 28% 72%);
+    background-color: black;
+    z-index: 5;
+}
+.smallscreen{
+    width:100%;
+    align-items: center !important;
+}
+.arrowdivstyle {
+    align-items: center !important;
+    /* border: 2px solid; */
+    width: 20%;
+    margin: auto;
+    text-align: center !important;
+    display: flex;
+    background-color: #E8F2FC;
+}
